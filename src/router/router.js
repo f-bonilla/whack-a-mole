@@ -1,25 +1,13 @@
 import Navigo from "navigo";
 import routes from "./routes.js";
+import pathHandler from "./pathHandler.js";
 
 const app = document.getElementById("app");
 
 // Configura el enrutador
 const router = new Navigo("/", { hash: false });
 
-// Registra las rutas
-Object.entries(routes).forEach(([path, view]) => {
-  router.on(path, () => {
-    app.innerHTML = view();
-    attachLinkHandlers(); // Intercepta los clics después de renderizar la vista
-  });
-});
-
-// Maneja rutas no válidas y redirige a /home
-router.notFound(() => {
-  router.navigate("/home");
-});
-
-// Intercepta los clics en los enlaces para evitar recarga de página
+// Función para interceptar los clics en los enlaces
 function attachLinkHandlers() {
   const links = document.querySelectorAll("a");
   links.forEach((link) => {
@@ -30,6 +18,16 @@ function attachLinkHandlers() {
     });
   });
 }
+
+// Registra las rutas delegando a `pathHandler`
+Object.entries(routes).forEach(([path, view]) => {
+  router.on(path, pathHandler({ view, app, attachLinkHandlers, path }));
+});
+
+// Maneja rutas no válidas y redirige a /home
+router.notFound(() => {
+  router.navigate("/home");
+});
 
 // Inicializa el enrutador
 router.resolve();
