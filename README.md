@@ -29,7 +29,7 @@ servidor o la gestión de puntuaciones pendientes en modo offline.
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/whack-a-mole.git
+   git clone https://github.com/f-bonilla/whack-a-mole.git
 
    ```
 
