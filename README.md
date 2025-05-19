@@ -3,9 +3,20 @@
 El clásico juego de Whack-a-Mole implementado como una aplicación web
 progresiva, utilizando Web Components y JavaScript vanilla.
 
-Puedes probarlo en el siguiente enlace:
+Puedes probarlo en el siguiente enlace, en la consola se pueden ver operaciones
+que no he llegado a implementar:
 
-[Whack-a-Mole - Demo en Producción](https://whack-a-mole-azure-beta.vercel.app)
+[Whack-a-Mole - Demo en Producción](https://whack-a-mole-zeta-two.vercel.app)
+
+## Información Importante
+
+Para una mejor comprensión del funcionamiento de la aplicación, se recomienda
+utilizarla con la **consola del navegador abierta**.
+
+La consola proporcionará información adicional sobre procesos que, aunque no
+están completamente implementados, se simulan correctamente y generan mensajes
+en los momentos oportunos. Esto incluye, por ejemplo, el envío de puntuación al
+servidor o la gestión de puntuaciones pendientes en modo offline.
 
 ## Tabla de Contenidos
 
