@@ -1,0 +1,31 @@
+{
+  "singleQuote": false,
+  "endOfLine": "lf",
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": "*.tpl",
+      "options": {
+        "parser": "html",
+        "singleQuote": false,
+        "semi": false,
+        "printWidth": 100,
+        "trailingComma": "none",
+        "proseWrap": "always",
+        "htmlWhitespaceSensitivity": "ignore",
+        "embeddedLanguageFormatting": "auto",
+        "arrowParens": "avoid",
+        "jsxBracketSameLine": true,
+        "bracketSpacing": false,
+        "vueIndentScriptAndStyle": false,
+        "endOfLine": "lf"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "always"
+      }
+    }
+  ]
+}
